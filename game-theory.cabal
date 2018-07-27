@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 28a4cd5d11632597cdb46124ab8378031639842f51625a3fbe645d1d88b3d950
+
+name:           game-theory
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/rickshilling/game-theory#readme>
+homepage:       https://github.com/rickshilling/game-theory#readme
+bug-reports:    https://github.com/rickshilling/game-theory/issues
+author:         Rick Shilling
+maintainer:     rick.shilling@gmail.com
+copyright:      Rick Shilling
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/rickshilling/game-theory
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_game_theory
+  default-language: Haskell2010
+
+executable game-theory-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , game-theory
+  other-modules:
+      Paths_game_theory
+  default-language: Haskell2010
+
+test-suite game-theory-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , game-theory
+  other-modules:
+      Paths_game_theory
+  default-language: Haskell2010
